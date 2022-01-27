@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <title>Tugas 13</title>
+</head>
+
+<body>
+    <div class="w3-container w3-center w3-black">
+        <img src="images/mydreams.png" alt="" style="width: 15%;">
+    </div>
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openDreams('Profile')">Profile</button>
+        <button class="w3-bar-item w3-button" onclick="openDreams('Mobil')">Mobil</button>
+        <button class="w3-bar-item w3-button" onclick="openDreams('Motor')">Motor</button>
+        <button class="w3-bar-item w3-button" onclick="openDreams('Rumah')">Rumah</button>
+        <button class="w3-bar-item w3-button" onclick="openDreams('Tempat')">Tempat</button>
+    </div>
+    <div id="Profile" class="w3-container Dreams w3-center" style="display:none;">
+        <h2>Profile</h2>
+        <img src="images/dinar.jpg" alt="" style="width: 20%;">
+        <p>NIM  : 10121060</p>
+        <p>Nama : Dinar Nur Aziz</p>
+        <p>Kelas: IF-2</p>
+    </div>
+    <div id="Mobil" class="w3-container Dreams w3-center w3-animate-fading" style="display:none;">
+        <h2>Mobil</h2>
+        <img src="images/lambo.jpg" alt="" style="width: 50%;">
+    </div>
+    <div id="Motor" class="w3-container Dreams w3-center w3-animate-bottom" style="display:none">
+        <h2>Motor</h2>
+        <img src="images/ducati.jpg" alt="" style="width: 50%;">
+    </div>
+    <div id="Rumah" class="w3-container Dreams w3-center w3-animate-top" style="display:none">
+        <h2>Rumah</h2>
+        <img src="images/rumah.jpg" alt="" style="width: 50%;">
+    </div>
+    <div id="Tempat" class="w3-container Dreams w3-center w3-animate-zoom" style="display:none">
+        <h2>Tokyo Jepang</h2>
+        <img src="images/tokyo.jpg" alt="" style="width: 50%;">
+    </div>
+    <script>
+        function openDreams(namaDreams) {
+            var i;
+            var x = document.getElementsByClassName("Dreams");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(namaDreams).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
